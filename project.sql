@@ -20,8 +20,6 @@ CREATE TABLE IF NOT EXISTS `csrf` (
   `Id` int(5) NOT NULL,
   `Username` varchar(20) NOT NULL,
   `Password` varchar(20) NOT NULL,
-  `Name` varchar(20) NOT NULL,
-  `Account_id` bigint(20) NOT NULL,
   `Amount` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -29,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `csrf` (
 -- Dumping data for table `csrf`
 --
 
-INSERT INTO `csrf` (`Id`, `Username`, `Password`, `Name`, `Account_id`, `Amount`) VALUES
+INSERT INTO `csrf` (`Id`, `Username`, `Password`, `Name`, `Account_id`, `Amount`) 
 (1, 'admin', 'password', 'John', 1102, 30000),
 (2, 'admin2', 'password2', 'Michael', 1108, 70000);
 
@@ -55,8 +53,6 @@ CREATE TABLE IF NOT EXISTS `csrf3` (
 
 CREATE TABLE IF NOT EXISTS `data` (
   `id` int(11) NOT NULL,
-  `CardNo` longtext NOT NULL,
-  `CVV` int(10) NOT NULL,
   `Gender` varchar(10) NOT NULL,
   `Username` varchar(15) NOT NULL,
   `Pin` varchar(10) NOT NULL
@@ -86,29 +82,7 @@ INSERT INTO `data` (`id`,`CardNo`,`CVV`, `Gender`, `Username`, `Pin`) VALUES
 (17, '445458222585', '520', 'Female', 'Makaya', '5248'),
 (18, '552566332478', '685', 'Male', 'Jacky', '2368');
 
-----------------------------------------------------------
-
-
---
--- Table structure for table `users_1`
---
-
-CREATE TABLE IF NOT EXISTS `users_1` (
-  `Id` int(4) NOT NULL,
-  `Usename` varchar(20) NOT NULL,
-  `Passwod` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `users_1`
---
-
-INSERT INTO `users_1` (`Id`, `Usename`, `Passwod`) VALUES
-(1, 'admin', 'password'),
-(2, 'admin2', 'password2'),
-(3, 'root', 'toor'),
-(4, 'Jon Snow', 'winter88'),
-(5, 'Mike Ross', 'Lawyer11');
+------------------------
 
 -----------------------------------------------------------------------
 --
@@ -117,8 +91,6 @@ INSERT INTO `users_1` (`Id`, `Usename`, `Passwod`) VALUES
 
 CREATE TABLE IF NOT EXISTS `xss`(
 `comment` VARCHAR(300) COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-`comment_id` SMALLINT(5) UNSIGNED NULL DEFAULT NULL,
-`name` VARCHAR(100) COLLATE latin1_swedish_ci NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 ---------------------------------------------------------------------------
